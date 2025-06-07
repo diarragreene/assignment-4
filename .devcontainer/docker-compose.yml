@@ -6,6 +6,17 @@ services:
     volumes:
       - ../..:/workspaces:cached
     command: sleep infinity
+    depends_on:
+      - mongo
+    # Optional: environment variables or ports if needed
 
   mongo:
     image: mongo:latest
+    restart: unless-stopped
+    ports:
+      - "27017:27017"  
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

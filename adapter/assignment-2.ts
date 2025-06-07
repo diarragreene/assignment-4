@@ -1,4 +1,4 @@
-import previous_assignment from './assignment-1'
+import previous_assignment from './assignment-1.js'
 
 export type BookID = string
 

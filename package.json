@@ -2,12 +2,16 @@
   "name": "assignment-template",
   "version": "1.0.0",
   "description": "This is a template repository for the first assignment in BVD 103 at McMaster Continuing Education.",
+  "type": "module",
   "main": "index.ts",
   "scripts": {
     "start-server": "tsx ./index.ts",
     "lint": "eslint ./**/*.ts",
     "fix-lint": "eslint --fix ./**/*.ts",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:ci": "vitest run"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +31,9 @@
     "@types/koa-qs": "~2.0.3",
     "eslint": "^8",
     "eslint-config-love": "^52",
-    "typescript": "^5"
+    "mongodb-memory-server": "^10.1.4",
+    "typescript": "^5",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.2"
   }
 }
